@@ -51,6 +51,24 @@
         /* Apagar todos os elementos da lista */
         frutas.Clear();
 
+        // Trabalhando com o Dicionario()
 
+        /* Criando um Dicionario de Dados*/
+        Dictionary<int, string> carros = new Dictionary<int, string>();
+        /* Adicionar Dados a um Dicionario*/
+        carros.Add(5, "Corsa");
+        carros.Add(10, "Fusca");
+        carros.Add(2, "Ford Ka");
+
+        Console.WriteLine(); //pula linha
+        Console.WriteLine(); //pula linha
+        Console.WriteLine(); //pula linha
+
+        Console.WriteLine("Meu dicionario de carros ");
+        /* Imprimir um dicionario de dados */
+        foreach (var carro in carros)
+        {
+            Console.WriteLine($"{carro.Key} {carro.Value}");
+        }
     }
 }
