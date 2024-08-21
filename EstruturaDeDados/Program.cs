@@ -1,4 +1,6 @@
-﻿internal class Program
+﻿using System.Collections;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
@@ -70,5 +72,79 @@
         {
             Console.WriteLine($"{carro.Key} {carro.Value}");
         }
+
+        Console.WriteLine(); //pula linha
+        Console.WriteLine("========================================");
+        Console.WriteLine(); //pula linha
+
+        //Trabalhando com fila //
+        /* Criar um fila  (queue) */
+        Queue<string> filaBanco = new Queue<string>();
+
+        /* Adicionar Elementos em uma Fila*/
+        filaBanco.Enqueue("André");
+        filaBanco.Enqueue("João");
+        filaBanco.Enqueue("Maria");
+        filaBanco.Enqueue("Bia");
+
+        foreach (var pessoa in filaBanco)
+        {
+            Console.WriteLine(pessoa);
+        }
+
+        // retirar o primeiro elemento de uma fila
+        filaBanco.Dequeue();
+
+        Console.WriteLine(); //pula linha
+        Console.WriteLine("========================================");
+        Console.WriteLine(); //pula linha
+        foreach (var pessoa in filaBanco)
+        {
+            Console.WriteLine(pessoa);
+        }
+
+
+        bool achou = filaBanco.Contains("Bia");
+
+        //Verificar se existe um elemento na fila
+        if (achou == true)
+        {
+            Console.WriteLine("A pessoa está na fila");
+        }
+        else
+        {
+            Console.WriteLine("A pessoa não está na fila");
+        }
+
+        Console.WriteLine(); //pula linha
+        Console.WriteLine("========================================");
+        Console.WriteLine(); //pula linha
+
+        //TRABALHANDO COM PILHA(STACK)
+        /* Criando uma Pilha*/
+        Stack<string> livros = new Stack<string>();
+
+        /*Adicionar elementos em uma pilha*/
+        livros.Push("Chapeuzinho Vermelho");
+        livros.Push("Branca de neve e o sete anoes");
+        livros.Push("Bela Fera");
+
+        foreach (var livro in livros)
+        {
+            Console.WriteLine(livro);
+        }
+
+        Console.WriteLine(); //pula linha
+        Console.WriteLine("========================================");
+        Console.WriteLine(); //pula linha
+
+        livros.Pop();
+        foreach (var livro in livros)
+        {
+            Console.WriteLine(livro);
+        }
+        Console.WriteLine(); //pula linha
+        Console.WriteLine("========================================");
+        Console.WriteLine(); //pula linha
     }
 }
